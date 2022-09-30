@@ -1,0 +1,190 @@
+/* card__header
+card__avatar
+card__body
+card__name
+card__list__type
+card__footer
+card__list_stats */
+img {
+    width: 100%;
+    display: block;
+}
+.card {
+    
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    
+    box-shadow: 3px 3px 7px black;
+    transition: transform 0.3s;
+      
+}
+.card:hover {
+    transform: scale(1.02);
+}
+.card__header {
+
+    
+    
+    background: linear-gradient(178.92deg, #7EC6C5 0.92%, #ABDAC6 47.96%, #CAE099 99.05%);
+    position: relative;
+    height: 120px;
+    margin-bottom: 80px;
+    margin: 0 7px;
+   
+}
+
+.card__main {
+    
+    padding-bottom: 0.5px;
+}
+.card__body {
+    
+    margin: 0 7px;
+}
+.bg-fire {
+    background: #fe8c00;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f83600, #fe8c00);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f83600, #fe8c00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+
+}
+.bg-water {
+    background: #396afc;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2948ff, #396afc);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2948ff, #396afc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+.bg-grass {
+    background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+}
+.bg-normal {
+    background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+}
+.bg-rock {
+    
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+}
+.bg-fighting {
+    background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+}
+.bg-flying {
+    background-image: linear-gradient(to top, #cc208e 0%, #6713d2 100%);
+}
+
+.bg-poison {
+    background-image: linear-gradient(-225deg, #AC32E4 0%, #7918F2 48%, #4801FF 100%);
+}
+.bg-ground {
+    background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+}
+.bg-bug {
+    background: #52c234;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #061700, #52c234);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #061700, #52c234); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+.bg-ghost {
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+}
+.bg-steel {
+    background-image: linear-gradient(to right, #f9d423 0%, #ff4e50 100%);
+}
+.bg-electric {
+    background: #F7971E;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FFD200, #F7971E);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FFD200, #F7971E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.bg-psychic {
+    background: #03001e;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #fdeff9, #ec38bc, #7303c0, #03001e);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #fdeff9, #ec38bc, #7303c0, #03001e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.bg-ice {
+    background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+}
+.bg-dragon {
+    background: #F00000;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #DC281E, #F00000);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #DC281E, #F00000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.bg-dark {
+    background: #16222A;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #3A6073, #16222A);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #3A6073, #16222A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.bg-fairy {
+    background: #ff00cc;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #333399, #ff00cc);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #333399, #ff00cc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+
+
+
+.card__avatar {
+    
+    position: absolute;
+    width: 60%;
+    justify-content: center;
+    top: 110px;
+    right: 60px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.card__name {
+    background-color: whitesmoke;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 900;
+    font-size: 23px;
+    padding-top: 80px;
+    
+    
+}
+.card__list__type {
+    background-color: whitesmoke;
+    display: flex;
+    
+    gap: 15px;
+    justify-content: center;
+    list-style: none;
+    
+    
+}
+.card__type {
+    font-weight: 700;
+    text-transform: capitalize;
+    padding: 3px 15px;
+    border-radius: 5px;
+    color: white;
+    margin-top: 10px;
+    
+}
+.card__footer {
+
+    background-color: whitesmoke;
+  margin: 0 7px;
+  
+  
+    
+    
+}
+.card__list__stats {
+    text-align: center;
+    display: grid;
+    gap:5px 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: center;
+    margin-bottom: 8px;
+    
+}

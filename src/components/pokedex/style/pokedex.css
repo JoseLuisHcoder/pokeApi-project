@@ -1,0 +1,26 @@
+
+.poke__header {
+    background-color: var(--color-orange-ligth);
+    height: 190px;
+    margin-bottom: 15px;
+}
+.poke__img {
+    
+    width: 200px;
+    margin: 0 auto;
+    padding: 3px 0;
+}
+.poke__welcome {
+
+}
+.poke__welcome__user {
+    color: white;
+    text-align: center;
+    padding-bottom: 5px;
+    font-weight: 700;
+}
+.poke__search {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}

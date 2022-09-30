@@ -1,0 +1,84 @@
+
+color{
+    --color-yellow: #FDCF00;
+    --color-blue:#2B58AE;
+    --color-orange:#F38B24;
+    --color-orange-ligth:#FD981F;
+    --color-black:#0C0C0C;
+    --color-black-light:#A19F9E;
+    --color-purpure:#8246E1;
+    --color-purpure-light:#9865E8;
+    --color-grey-light:#EEE6F4;
+    --color-blue1:#1064FA;
+    --color-celeste:#3ECBFA;
+}
+
+.home {
+    background-image: url(./images/fondo.jpg) ;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.home__card {
+display: flex;
+flex-direction: column;
+
+align-items: center;
+
+
+min-width: 365px;
+margin: 0 auto;
+height: 350px;
+margin-top: 220px;
+border-radius: 10px;
+box-shadow: 5px 5px 10px gray;
+
+-webkit-backdrop-filter: blur(15px);
+backdrop-filter: blur(15px);
+background-color: rgba(243, 243, 243, 0.2);
+}
+.home__title {
+font-size: 3rem;
+text-align: center;
+margin-top: 80px;
+
+color: whitesmoke;
+-webkit-text-stroke: 1.5px var(--color-orange);
+margin-bottom: 40px;
+
+}
+.home__paragraph {
+font-size: 1.2rem;
+color: whitesmoke;
+margin-bottom: 20px;
+}
+.home__user {
+
+}
+.home__input {
+    width: 200px;
+    height: 28px;
+    outline: transparent;
+    border-radius: 5px ;
+
+}
+.home__btn {
+width: 100px;
+height: 34px;
+color: white;
+background-color: var(--color-orange);
+border: transparent;
+border-radius: 5px;
+transition: 0.2s ;
+}
+.home__btn:hover {
+    background-color: var(--color-blue);
+}
