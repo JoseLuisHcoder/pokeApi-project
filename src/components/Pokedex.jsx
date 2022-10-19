@@ -47,7 +47,7 @@ const Pokedex = () => {
     //LOGICA paginacion
     const [page, setpage] = useState(1)
     //pero no se puede poner 1000 paginas ya que no hay, por tanto se debe poner un limite
-    const [pokePerPage, setPokePerPage] = useState(8)
+    const [pokePerPage, setPokePerPage] = useState(10000)
         // page 1 - 1    va dar  8 = 0
         // page 2 - 1   va dar  8 = 8
         // page 3 - 1   va dar  8 = 16
@@ -69,7 +69,9 @@ const Pokedex = () => {
                 <span>
                     <SelectType setpage={setpage} setPokeSearch={setPokeSearch} optionType={optionType} setOptionType= {setOptionType}/>
                 </span>
-                <Pagination 
+            </div>
+            <div>
+            <Pagination 
                 setpage={setpage} 
                 page={page}
                 pagesLength={pokemons && Math.ceil(pokemons?.length/ pokePerPage)}

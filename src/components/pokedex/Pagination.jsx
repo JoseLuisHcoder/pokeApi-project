@@ -15,7 +15,7 @@ const currentBlock = Math.ceil(page / pagesPerBlock)
 const blockLength =  Math.ceil(pagesLength/pagesPerBlock)
 
 const arrPages = []
-const initialPage = ((currentBlock - 1) * pagesPerBlock) + 1
+const initialPage = (currentBlock - 1) * pagesPerBlock + 1
 // const limitPage = initialPage + pagesPerBlock - 1 es una forma, la otra forma es la siguiente
 //para el ultimo bloque se debe considerar que no es exaxto, para lo cual haremos un ternario
 const limitPage = blockLength === currentBlock ?  pagesLength : currentBlock * pagesPerBlock
@@ -36,10 +36,10 @@ setpage(currentPage)
     <div className='pagination'>
         {
             page > 1 && 
-        <div onClick={handlePrev} className='pagination__prev pagination__avtive'>&#60;</div>
-        }
+        <div onClick={handlePrev} className='pagination__prev pagination__active'>&#60;</div>
+        } 
     
-        <div>...</div>
+        
         <ul className='pagination__container'>
             {
                 arrPages.map(e => (
@@ -50,6 +50,7 @@ setpage(currentPage)
                 ))
             }
         </ul>
+        <div>...</div>
         {
             page < pagesLength && 
         <div onClick={handleNext} className='pagination__next'>&#62;</div>
