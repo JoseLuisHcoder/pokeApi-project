@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
+import Pagination from './pokedex/Pagination'
 import PokemonCard from './pokedex/PokemonCard'
 import SearchInput from './pokedex/SearchInput'
 import SelectType from './pokedex/SelectType'
@@ -43,6 +44,16 @@ const Pokedex = () => {
 
     }, [pokeSearch, optionType] )
 
+    //LOGICA paginacion
+    const [page, setpage] = useState(1)
+    //pero no se puede poner 1000 paginas ya que no hay, por tanto se debe poner un limite
+    const [pokePerPage, setPokePerPage] = useState(8)
+        // page 1 - 1    va dar  8 = 0
+        // page 2 - 1   va dar  8 = 8
+        // page 3 - 1   va dar  8 = 16
+    const initialPoke = (page - 1) * pokePerPage
+    const finalPoke = page * pokePerPage
+
 
     const nameTrainer = useSelector(state => state.nameTrainer)
   return (
@@ -56,8 +67,13 @@ const Pokedex = () => {
                     <SearchInput setPokeSearch={setPokeSearch} setOptionType={setOptionType}/>
                 </span>
                 <span>
-                    <SelectType setPokeSearch={setPokeSearch} optionType={optionType} setOptionType= {setOptionType}/>
+                    <SelectType setpage={setpage} setPokeSearch={setPokeSearch} optionType={optionType} setOptionType= {setOptionType}/>
                 </span>
+                <Pagination 
+                setpage={setpage} 
+                page={page}
+                pagesLength={pokemons && Math.ceil(pokemons?.length/ pokePerPage)}
+                />
             </div>
 
         </div>
@@ -65,8 +81,10 @@ const Pokedex = () => {
         
         <div className='card__container'>
         {
-            pokemons?.results.map(pokemon => (
-                <PokemonCard key={pokemon.url} url={pokemon.url}/>
+            pokemons?.results.slice(initialPoke, finalPoke).map(pokemon => (
+                <PokemonCard 
+                key={pokemon.url} 
+                url={pokemon.url}/>
             ))
         }
 
